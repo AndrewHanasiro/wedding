@@ -24,7 +24,7 @@ jobs:
         run: npm ci
       - name: Verify build
         run: npm run build -- --noEmit
-      - run: "GCP auth"
+      - name: "GCP auth"
         uses: "google-github-actions/auth@v1"
         with:
           credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
