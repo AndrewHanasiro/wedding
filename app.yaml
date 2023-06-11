@@ -7,5 +7,3 @@ handlers:
   - url: /.*
     secure: always
     script: auto
-env_variables:
-  GOOGLE_MAPS_API_KEY: AIzaSyBXPKGr8LxA62TqivjKrcQuEAheT85gNVo
