@@ -1,2 +1,23 @@
+@use "../../styles/variables.scss" as s;
+
 .button {
+  border: 0;
+  padding: 1vmin;
+  background-color: s.$theme-green;
+  @include s.theme-color-black;
+  border-radius: 1vmin;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 1vmin;
+  align-items: center;
+  font-size: 2vmin;
+
+  &:hover,
+  &:active {
+    background-color: darken(s.$theme-green, 20%);
+  }
+  &:active {
+    transform: translateY(1vmin);
+  }
 }

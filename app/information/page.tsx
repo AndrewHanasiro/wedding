@@ -1,13 +1,20 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import Map from "@/components/Map";
 import Button from "@/components/Button";
+import GIcon from "@/public/icon-google.svg";
 
 import style from "./information.module.scss";
 
 export default function Information() {
   const search = "Espaço+Jabutica";
+
+  function calendar() {
+    fetch("https://www.googleapis.com/calendar/v3/calendars/calendarId");
+  }
 
   return (
     <div className={style.information}>
@@ -49,7 +56,17 @@ export default function Information() {
         <section>
           <h2>Schedule</h2>
           <p>
-            <Button>asas</Button>
+            <a
+              target="_blank"
+              href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MGwxcnZjMGFsc3RndmZtYW9vbnVzODdyOTQgYW5kcmV3a2hhbmFzaXJvQG0&amp;tmsrc=andrewkhanasiro%40gmail.com"
+            >
+              <Image
+                src="https://www.google.com/calendar/images/ext/gc_button1_pt-BR.gif"
+                alt="Google Calendar"
+                width={100}
+                height={25}
+              />
+            </a>
           </p>
         </section>
       </div>

@@ -5,6 +5,16 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.google.com",
+        port: "",
+        pathname: "/calendar/images/ext/gc_button1_pt-BR.gif",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
