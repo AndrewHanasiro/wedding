@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 2vh 0;
-  border-bottom: rgb(217, 234, 192) solid 0.5vh;
+  border-bottom: s.$theme-green solid 0.5vh;
 
   &__link {
     @include link;
@@ -28,7 +28,7 @@
     &:hover {
       text-decoration-line: underline;
       text-decoration-style: wavy;
-      text-decoration-color: #eed9e2;
+      text-decoration-color: s.$theme-red;
       text-shadow: 1vmin;
     }
   }

@@ -2,7 +2,8 @@ $theme-black: rgb(55, 52, 53);
 $theme-green: rgb(217, 234, 192);
 $theme-grey: rgb(96, 96, 98);
 $theme-white: rgb(255, 254, 246);
-
+$theme-red: #eed9e2;
+$theme-shadow: #ccc;
 $max-width: 640px;
 
 @mixin theme-background-white {

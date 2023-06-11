@@ -5,3 +5,11 @@
   height: 100%;
   @include s.vertical-center-content;
 }
+.feedback {
+  &__success {
+    color: darken(s.$theme-green, 30%);
+  }
+  &__error {
+    color: darken(s.$theme-red, 30%);
+  }
+}

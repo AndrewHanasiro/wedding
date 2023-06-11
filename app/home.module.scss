@@ -26,5 +26,8 @@
     color: theme-grey;
     transform: rotate(330deg);
     text-align: center;
+    @media only screen and (max-width: s.$max-width) {
+      font-size: 15vmin;
+    }
   }
 }

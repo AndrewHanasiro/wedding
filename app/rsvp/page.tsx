@@ -12,6 +12,8 @@ import Form from "@/components/Form";
 export default function RSVP() {
   let [name, setName] = useState("");
   let [child, setChild] = useState(false);
+  let [isVisible, setIsVisible] = useState(false);
+  let [hasError, setHasError] = useState(false);
 
   function submit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
@@ -21,8 +23,13 @@ export default function RSVP() {
         name,
         children: child,
       });
+      setName("");
+      setChild(false);
     } catch (error) {
       console.error(error);
+      setHasError(true);
+    } finally {
+      setIsVisible(true);
     }
   }
   return (
@@ -41,6 +48,16 @@ export default function RSVP() {
         />
         <Submit value="Confirm" />
       </Form>
+      {isVisible &&
+        (hasError ? (
+          <div className={style.feedback__error}>
+            An error has occurs, please be ask the groom for help
+          </div>
+        ) : (
+          <div className={style.feedback__success}>
+            Your presence has been confirmed
+          </div>
+        ))}
     </div>
   );
 }

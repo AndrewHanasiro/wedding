@@ -8,14 +8,14 @@
   font-size: 2vmin;
   background-color: transparent;
   border-radius: 1vmin;
-  box-shadow: 0 0.5vmin 1vmin #ccc;
+  box-shadow: 0 0.5vmin 1vmin s.$theme-shadow;
   &:active {
-    box-shadow: 0 0 1vmin #ccc;
+    box-shadow: 0 0 1vmin s.$theme-shadow;
   }
   @media only screen and (max-width: s.$max-width) {
     width: 100%;
     font-size: 5vmin;
     padding: 2vmin;
-    box-shadow: 0 1vmin 2vmin #ccc;
+    box-shadow: 0 1vmin 2vmin s.$theme-shadow;
   }
 }

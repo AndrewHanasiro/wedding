@@ -18,8 +18,8 @@ const navLinks = [
     tab: "RSVP",
   },
   {
-    url: "/about_us",
-    tab: "About Us",
+    url: "/gift",
+    tab: "Gift",
   },
 ];
 

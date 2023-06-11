@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 
 import style from "./information.module.scss";
+import Map from "@/components/Map";
 
 export default function Information() {
-  const apiKey = process.env.GOOGLE_MAPS_API_KEY;
   const search = "Espaço+Jabutica";
-  const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${search}`;
+
   return (
     <div className={style.information}>
       <h1>5W (four)</h1>
@@ -21,13 +21,7 @@ export default function Information() {
         <section>
           <h2>Where</h2>
           <p>Rua Harmonia, 896 - Sumarezinho, São Paulo - SP, 05435-001</p>
-          <iframe
-            className={style.information__map}
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-            src={mapSrc}
-          ></iframe>
+          <Map search={search} />
         </section>
         <section>
           <h2>When</h2>
