@@ -4,6 +4,10 @@
   font-size: 3vmin;
   font-family: Engravers Gothic BT;
   @include s.theme-color-black;
+
+  @media only screen and (max-width: s.$max-width) {
+    font-size: 6vmin;
+  }
 }
 
 .header {
@@ -33,5 +37,9 @@
     @include link;
     text-decoration-line: underline;
     text-decoration-style: solid;
+  }
+
+  @media only screen and (max-width: s.$max-width) {
+    flex-direction: column;
   }
 }

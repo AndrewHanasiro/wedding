@@ -11,5 +11,8 @@
       text-indent: 5vmin;
       text-align: justify;
     }
+    @media only screen and (max-width: s.$max-width) {
+      width: 90%;
+    }
   }
 }

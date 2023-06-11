@@ -1,8 +1,13 @@
+@use "../styles/variables.scss" as s;
+
 .form {
   width: 40vmax;
   padding: 5vmin;
 
   input {
     margin-bottom: 2vmin;
+    @media only screen and (max-width: s.$max-width) {
+      margin-bottom: 3vmin;
+    }
   }
 }

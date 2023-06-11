@@ -1,3 +1,5 @@
+@use "../styles/variables.scss" as s;
+
 .input_submit {
   display: block;
   border: none;
@@ -9,5 +11,11 @@
   box-shadow: 0 0.5vmin 1vmin #ccc;
   &:active {
     box-shadow: 0 0 1vmin #ccc;
+  }
+  @media only screen and (max-width: s.$max-width) {
+    width: 100%;
+    font-size: 5vmin;
+    padding: 2vmin;
+    box-shadow: 0 1vmin 2vmin #ccc;
   }
 }

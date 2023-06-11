@@ -3,6 +3,8 @@ $theme-green: rgb(217, 234, 192);
 $theme-grey: rgb(96, 96, 98);
 $theme-white: rgb(255, 254, 246);
 
+$max-width: 640px;
+
 @mixin theme-background-white {
   background-color: $theme-white;
 }

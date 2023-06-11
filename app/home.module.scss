@@ -13,6 +13,11 @@
     background-color: transparent;
     background-size: cover;
     @include s.center-content;
+
+    @media only screen and (max-width: s.$max-width) {
+      width: 80vmin;
+      height: 80vmin;
+    }
   }
 
   &__title {
