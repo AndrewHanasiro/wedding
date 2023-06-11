@@ -11,6 +11,7 @@
       h2 {
         font-family: Engravers Gothic BT;
       }
+
       p {
         a {
           @include s.theme-color-black;
@@ -18,6 +19,7 @@
         }
       }
     }
+
     @media only screen and (max-width: s.$max-width) {
       width: 90%;
     }

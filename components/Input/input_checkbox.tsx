@@ -1,6 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction } from "react";
+
 import style from "./input_checkbox.module.scss";
 
 type CheckboxInput = {

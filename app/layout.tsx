@@ -1,7 +1,7 @@
 import { Metadata } from "next";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-
 import "@/styles/global.scss";
 
 export const metadata: Metadata = {

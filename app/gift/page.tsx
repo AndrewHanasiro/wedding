@@ -1,4 +1,5 @@
 import React from "react";
+
 import style from "./gift.module.scss";
 
 export default function AboutUs() {

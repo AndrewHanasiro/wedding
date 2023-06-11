@@ -1,8 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
-import style from "./information.module.scss";
 import Map from "@/components/Map";
+import Button from "@/components/Button";
+
+import style from "./information.module.scss";
 
 export default function Information() {
   const search = "Espaço+Jabutica";
@@ -42,6 +44,12 @@ export default function Information() {
           <p>
             Gotta be joking right...? In case you don&apos;t know see{" "}
             <Link href="/about_us">this</Link>
+          </p>
+        </section>
+        <section>
+          <h2>Schedule</h2>
+          <p>
+            <Button>asas</Button>
           </p>
         </section>
       </div>

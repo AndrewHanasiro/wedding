@@ -9,9 +9,11 @@
   background-color: transparent;
   border-radius: 1vmin;
   box-shadow: 0 0.5vmin 1vmin s.$theme-shadow;
+
   &:active {
     box-shadow: 0 0 1vmin s.$theme-shadow;
   }
+
   @media only screen and (max-width: s.$max-width) {
     width: 100%;
     font-size: 5vmin;

@@ -8,9 +8,11 @@
   border: none;
   background-color: transparent;
   border-bottom: solid s.$theme-shadow 1px;
+
   &:focus {
     outline: none;
   }
+
   @media only screen and (max-width: s.$max-width) {
     font-size: 5vmin;
   }

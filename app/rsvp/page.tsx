@@ -1,13 +1,15 @@
 "use client";
 
 import React, { FormEvent, useState } from "react";
-import style from "./rsvp.module.scss";
 import { getDatabase, ref, set } from "firebase/database";
+
 import { app } from "@/app/_config/firebase";
-import Text from "@/components/Input/input_text";
-import Submit from "@/components/Input/input_submit";
 import Checkbox from "@/components/Input/input_checkbox";
+import Submit from "@/components/Input/input_submit";
+import Text from "@/components/Input/input_text";
 import Form from "@/components/Form";
+
+import style from "./rsvp.module.scss";
 
 export default function RSVP() {
   let [name, setName] = useState("");
@@ -32,6 +34,7 @@ export default function RSVP() {
       setIsVisible(true);
     }
   }
+
   return (
     <div className={style.rsvp}>
       <h1>Répondez S&#8217;il Vous Plaît</h1>
