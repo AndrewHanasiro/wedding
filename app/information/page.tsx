@@ -58,7 +58,7 @@ export default function Information() {
           <p>
             <a
               target="_blank"
-              href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MGwxcnZjMGFsc3RndmZtYW9vbnVzODdyOTQgYW5kcmV3a2hhbmFzaXJvQG0&amp;tmsrc=andrewkhanasiro%40gmail.com"
+              href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MGwxcnZjMGFsc3RndmZtYW9vbnVzODdyOTQgMTdmZjYzYzNkYmEyOWU3ZDQ2Yjg1NDEyODE4YjdkMWQ3NTg2ZDA5NWM1ZTcwYWRmOTIyNmM3ZDc3Njg2YTczZkBn&amp;tmsrc=17ff63c3dba29e7d46b85412818b7d1d7586d095c5e70adf9226c7d77686a73f%40group.calendar.google.com"
             >
               <Image
                 src="https://www.google.com/calendar/images/ext/gc_button1_pt-BR.gif"
