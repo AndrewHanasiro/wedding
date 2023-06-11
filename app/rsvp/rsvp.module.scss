@@ -1,0 +1,7 @@
+@use "../styles/variables.scss" as s;
+
+.rsvp {
+  width: 100%;
+  height: 100%;
+  @include s.vertical-center-content;
+}

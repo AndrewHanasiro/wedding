@@ -1,0 +1,13 @@
+.input_submit {
+  display: block;
+  border: none;
+  padding: 1vmin;
+  width: 20%;
+  font-size: 2vmin;
+  background-color: transparent;
+  border-radius: 1vmin;
+  box-shadow: 0 0.5vmin 1vmin #ccc;
+  &:active {
+    box-shadow: 0 0 1vmin #ccc;
+  }
+}

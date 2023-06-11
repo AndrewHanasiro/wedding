@@ -1,0 +1,29 @@
+@use "../styles/variables.scss" as s;
+
+.information {
+  width: 100%;
+  height: 100%;
+  @include s.vertical-center-content;
+
+  &__content {
+    width: 60%;
+    section {
+      h2 {
+        font-family: Engravers Gothic BT;
+      }
+      p {
+        a {
+          @include s.theme-color-black;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 50vh;
+    border: 0;
+    border-radius: 2vmin;
+  }
+}

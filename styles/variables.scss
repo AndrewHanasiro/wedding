@@ -1,0 +1,28 @@
+$theme-black: rgb(55, 52, 53);
+$theme-green: rgb(217, 234, 192);
+$theme-grey: rgb(96, 96, 98);
+$theme-white: rgb(255, 254, 246);
+
+@mixin theme-background-white {
+  background-color: $theme-white;
+}
+
+@mixin theme-background-black {
+  background-color: $theme-black;
+}
+
+@mixin theme-color-black {
+  color: $theme-black;
+}
+
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin vertical-center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

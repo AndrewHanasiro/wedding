@@ -1,0 +1,37 @@
+@use "../styles/variables.scss" as s;
+
+@mixin link {
+  font-size: 3vmin;
+  font-family: Engravers Gothic BT;
+  @include s.theme-color-black;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2vh 0;
+  border-bottom: rgb(217, 234, 192) solid 0.5vh;
+
+  &__link {
+    @include link;
+    text-decoration: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+      text-decoration-color: #eed9e2;
+      text-shadow: 1vmin;
+    }
+  }
+
+  &__link_active {
+    @include link;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+  }
+}

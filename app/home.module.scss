@@ -1,0 +1,25 @@
+@use "../styles/variables.scss" as s;
+
+.home {
+  height: 100%;
+  @include s.center-content;
+
+  &__img {
+    width: 60vmin;
+    height: 60vmin;
+    background-image: url("../public/flower.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: cover;
+    @include s.center-content;
+  }
+
+  &__title {
+    font-family: Edwardian Script ITC;
+    font-size: 8vmin;
+    color: theme-grey;
+    transform: rotate(330deg);
+    text-align: center;
+  }
+}

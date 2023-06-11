@@ -1,0 +1,12 @@
+.input_text {
+  display: block;
+  padding: 1vmin;
+  font-size: 2vmin;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: solid #ccc 1px;
+  &:focus {
+    outline: none;
+  }
+}

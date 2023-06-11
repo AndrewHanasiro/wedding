@@ -1,0 +1,10 @@
+@use "../styles/variables.scss" as s;
+
+.footer {
+  grid-area: footer;
+  @include s.theme-background-black;
+  @include s.center-content;
+  color: white;
+  font-size: 2.5vmin;
+  font-family: Edwardian Script ITC;
+}
