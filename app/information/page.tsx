@@ -4,7 +4,7 @@ import Link from "next/link";
 import style from "./information.module.scss";
 
 export default function Information() {
-  const apiKey = "AIzaSyAFsmGJ3zKXg9v2-rYAUKQiDTfl7Cl0KnY";
+  const apiKey = process.env.GOOGLE_MAPS_API_KEY;
   const search = "Espaço+Jabutica";
   const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${search}`;
   return (
