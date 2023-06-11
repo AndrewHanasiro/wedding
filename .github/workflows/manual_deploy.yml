@@ -1,0 +1,39 @@
+name: Manual deploy to production
+on:
+  push:
+    branches: [main]
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Fetching node version
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+        id: nvm
+      - name: Use right version of node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
+      - name: Create a .npmrc
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGE_TOKEN }}" >> .npmrc
+          echo "@auth-plus:registry=https://npm.pkg.github.com" >> .npmrc
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify build
+        run: npm run build -- --noEmit
+      - run: "GCP auth"
+        uses: "google-github-actions/auth@v1"
+        with:
+          credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
+      - name: "Set up Cloud SDK"
+        uses: "google-github-actions/setup-gcloud@v1"
+      - name: "Use gcloud CLI"
+        run: "gcloud info"
+      - name: "deploy"
+        uses: "google-github-actions/deploy-appengine@v1"
+        with:
+          env_vars: |-
+            GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}
