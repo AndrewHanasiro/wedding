@@ -51,11 +51,11 @@ export default function RSVP() {
         {isVisible &&
           (hasError ? (
             <div className={style.feedback__error}>
-              An error has occurs, please be ask the groom for help
+              Algo de errado aconteceu, fale com o noivo
             </div>
           ) : (
             <div className={style.feedback__success}>
-              Your presence has been confirmed
+              Sua presença foi confirmada. Obrigado
             </div>
           ))}
       </div>

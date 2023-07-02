@@ -36,16 +36,15 @@ export default function Navbar() {
       {navLinks.map((link) => {
         const isActive = pathname === link.url;
         return (
-          <Link
+          <a
             className={
               isActive ? style.header__link_active : style.header__link
             }
             href={link.url}
             key={link.url}
-            scroll={false}
           >
             {link.tab}
-          </Link>
+          </a>
         );
       })}
     </header>
