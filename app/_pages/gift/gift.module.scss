@@ -18,6 +18,10 @@
 
     @media only screen and (max-width: s.$max-width) {
       width: 90%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10vmin;
     }
   }
 
