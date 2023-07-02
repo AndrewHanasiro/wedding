@@ -1,5 +1,11 @@
 @use "../../../styles/variables.scss" as s;
 
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home {
   height: 100vh;
   @include s.center-content;
