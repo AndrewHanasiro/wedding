@@ -10,11 +10,21 @@
   width: 100%;
   @include s.vertical-center-content;
 
+  &__description {
+    width: 40%;
+    text-align: center;
+
+    @media only screen and (max-width: s.$max-width) {
+      width: 90%;
+    }
+  }
+
   &__content {
     width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: end;
 
     @media only screen and (max-width: s.$max-width) {
       width: 90%;

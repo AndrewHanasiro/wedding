@@ -23,10 +23,15 @@ export default function Gift() {
     <section className={style.section} id="gift">
       <div className={style.gift}>
         <h2>Lista de presentes</h2>
+        <p className={style.gift__description}>
+          Sua presença neste momento tão especial é o que realmente importa! Mas
+          caso queira nos presentear, temos duas opções: via PIX (QR code) e uma
+          lista de casamento
+        </p>
         <div className={style.gift__content}>
           <div className={style.gift__item}>
             <canvas id="canvas" className={style.gift__image}></canvas>
-            <span className={style.gift__alt}>QRcode PIX</span>
+            <span className={style.gift__alt}>QR code PIX</span>
           </div>
           <div className={style.gift__item}>
             <Link

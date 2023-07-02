@@ -20,7 +20,7 @@ body {
   main {
     padding: 5vmin;
     box-sizing: border-box;
-    width: 100%;
+    width: 100vw;
     @include s.vertical-center-content;
 
     h1 {
