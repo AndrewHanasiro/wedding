@@ -36,10 +36,18 @@
 
     @media only screen and (max-width: s.$max-width) {
       width: 90%;
-      flex-direction: column;
-      justify-content: center;
+      grid-template-areas:
+        "p_t"
+        "p_i"
+        "p_d"
+        "space"
+        "l_t"
+        "l_i"
+        "l_d";
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto 10vmin auto auto auto;
+      justify-items: center;
       align-items: center;
-      gap: 10vmin;
     }
   }
 
