@@ -1,0 +1,27 @@
+@use "../../../styles/variables.scss" as s;
+
+.information {
+  width: 100%;
+  height: 100%;
+  @include s.vertical-center-content;
+
+  &__content {
+    width: 60%;
+
+    section {
+      text-align: center;
+      p {
+        font-family: Engravers Gothic BT;
+        font-size: 3vmin;
+      }
+    }
+
+    @media only screen and (max-width: s.$max-width) {
+      width: 90%;
+    }
+  }
+
+  &__calendar {
+    margin: 0;
+  }
+}

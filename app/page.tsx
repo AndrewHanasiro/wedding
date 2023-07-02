@@ -1,16 +1,19 @@
-import style from "./home.module.scss";
+import Gift from "./_pages/gift/page";
+import Home from "./_pages/home/page";
+import Information from "./_pages/information/page";
+import RSVP from "./_pages/rsvp/page";
+import Text from "./_pages/text/page";
 
-export default function Home() {
+export default function Root() {
+  const search = "Espaço+Jabutica";
+
   return (
-    <div className={style.home}>
-      <div className={style.home__img}>
-        <span className={style.home__title}>
-          Wedding
-          <br />
-          Paula & <br />
-          Andrew
-        </span>
-      </div>
-    </div>
+    <>
+      <Home />
+      <Text />
+      <Information />
+      <RSVP />
+      <Gift />
+    </>
   );
 }

@@ -5,27 +5,27 @@ import { usePathname } from "next/navigation";
 
 import style from "./header.module.scss";
 
-const navLinks = [
-  {
-    url: "/",
-    tab: "Home",
-  },
-  {
-    url: "/information",
-    tab: "Information",
-  },
-  {
-    url: "/rsvp",
-    tab: "RSVP",
-  },
-  {
-    url: "/gift",
-    tab: "Gift",
-  },
-];
-
 export default function Navbar() {
   const pathname = usePathname();
+
+  const navLinks = [
+    {
+      url: "#home",
+      tab: "Principal",
+    },
+    {
+      url: "#information",
+      tab: "informações",
+    },
+    {
+      url: "#rsvp",
+      tab: "Confirmar",
+    },
+    {
+      url: "#gift",
+      tab: "Presentes",
+    },
+  ];
 
   return (
     <header className={style.header}>

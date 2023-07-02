@@ -26,6 +26,26 @@ body {
 
     h1 {
       font-family: Engravers Gothic BT;
+      font-weight: normal;
+      font-size: 7vmin;
+      text-align: center;
+      margin: 3vmin 0;
+    }
+
+    h2 {
+      font-family: Engravers Gothic BT;
+      font-weight: normal;
+      font-size: 4vmin;
+      text-align: center;
+      margin: 3vmin 0;
+    }
+
+    h4 {
+      font-family: Engravers Gothic BT;
+      font-weight: normal;
+      font-size: 2vmin;
+      text-align: center;
+      margin: 0;
     }
   }
 
@@ -42,4 +62,9 @@ body {
 @font-face {
   font-family: Engravers Gothic BT;
   src: url("../public/EngraversGothicBT.ttf");
+}
+
+@font-face {
+  font-family: Handlee-Regular;
+  src: url("../public/Handlee-Regular.ttf");
 }
