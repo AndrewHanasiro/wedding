@@ -12,14 +12,33 @@
 
   &__content {
     width: 60%;
-
-    p {
-      text-indent: 5vmin;
-      text-align: justify;
-    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
     @media only screen and (max-width: s.$max-width) {
       width: 90%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__alt {
+    font-family: Handlee-Regular;
+    text-decoration: none;
+    &:visited,
+    &:active {
+      color: s.$theme-black;
     }
   }
 }

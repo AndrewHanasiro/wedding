@@ -2,8 +2,8 @@ import style from "./home.module.scss";
 
 export default function Home() {
   return (
-    <section>
-      <div className={style.home} id="home">
+    <section className={style.section} id="home">
+      <div className={style.home}>
         <div className={style.home__img}>
           <span className={style.home__title}>
             <p className={style.home__names}>
