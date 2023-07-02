@@ -10,25 +10,24 @@ export default function Information() {
   const search = "Espaço+Jabutica";
 
   return (
-    <div className={style.information} id="information">
-      <div className={style.information__content}>
-        <h1>Mini-wedding</h1>
-        <section>
-          <p>
+    <section className={style.section} id="information">
+      <div className={style.information}>
+        <div className={style.information__content}>
+          <h1>Mini-wedding</h1>
+          <p className={style.information__text}>
             Sábado, 25 de Novembro 2023
             <br />
             Horário: 12H
           </p>
-          <p>
+          <p className={style.information__text}>
             Rua Harmonia, 896
             <br />
             Vila Madalena - São Paulo
           </p>
           <Map search={search} />
-        </section>
 
-        <h4>Agende no seu calendário</h4>
-        <section>
+          <h4>Agende no seu calendário</h4>
+
           <p className={style.information__calendar}>
             <a
               target="_blank"
@@ -42,8 +41,8 @@ export default function Information() {
               />
             </a>
           </p>
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,8 +1,13 @@
 @use "../../../styles/variables.scss" as s;
 
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .text {
   width: 70%;
-  height: 100%;
   display: grid;
   grid-template-areas: "text photo";
   grid-template-columns: 1fr 1fr;
@@ -16,8 +21,13 @@
     grid-area: text;
     font-family: Handlee-Regular;
     font-size: 2.1vmin;
+
     p {
       margin-top: 0;
+    }
+
+    @media only screen and (max-width: s.$max-width) {
+      font-size: 4vmin;
     }
   }
 
@@ -32,5 +42,8 @@
 
   @media only screen and (max-width: s.$max-width) {
     width: 90%;
+    grid-template-areas: "photo" "text";
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
   }
 }

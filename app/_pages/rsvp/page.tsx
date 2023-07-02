@@ -36,27 +36,29 @@ export default function RSVP() {
   }
 
   return (
-    <div className={style.rsvp} id="rsvp">
-      <h2>Confirme sua prensença</h2>
-      <Form submit={submit}>
-        <Text placeholder="Nome completo" setValue={setName} value={name} />
-        <Checkbox
-          label="Possuo menos de 12 anos"
-          setValue={setChild}
-          value={child}
-        />
-        <Submit value="Confirmar" />
-      </Form>
-      {isVisible &&
-        (hasError ? (
-          <div className={style.feedback__error}>
-            An error has occurs, please be ask the groom for help
-          </div>
-        ) : (
-          <div className={style.feedback__success}>
-            Your presence has been confirmed
-          </div>
-        ))}
-    </div>
+    <section className={style.section} id="rsvp">
+      <div className={style.rsvp}>
+        <h2>Confirme sua prensença</h2>
+        <Form submit={submit}>
+          <Text placeholder="Nome completo" setValue={setName} value={name} />
+          <Checkbox
+            label="Possuo menos de 12 anos"
+            setValue={setChild}
+            value={child}
+          />
+          <Submit value="Confirmar" />
+        </Form>
+        {isVisible &&
+          (hasError ? (
+            <div className={style.feedback__error}>
+              An error has occurs, please be ask the groom for help
+            </div>
+          ) : (
+            <div className={style.feedback__success}>
+              Your presence has been confirmed
+            </div>
+          ))}
+      </div>
+    </section>
   );
 }

@@ -10,19 +10,23 @@ export default function Navbar() {
 
   const navLinks = [
     {
-      url: "#home",
+      url: "/#home",
       tab: "Principal",
     },
     {
-      url: "#information",
+      url: "/#text",
+      tab: "Carta",
+    },
+    {
+      url: "/#information",
       tab: "informações",
     },
     {
-      url: "#rsvp",
+      url: "/#rsvp",
       tab: "Confirmar",
     },
     {
-      url: "#gift",
+      url: "/#gift",
       tab: "Presentes",
     },
   ];
@@ -31,7 +35,6 @@ export default function Navbar() {
     <header className={style.header}>
       {navLinks.map((link) => {
         const isActive = pathname === link.url;
-
         return (
           <Link
             className={
@@ -39,6 +42,7 @@ export default function Navbar() {
             }
             href={link.url}
             key={link.url}
+            scroll={false}
           >
             {link.tab}
           </Link>
