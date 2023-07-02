@@ -13,6 +13,8 @@
   &__description {
     width: 40%;
     text-align: center;
+    margin: 1vmin 0;
+    font-family: Engravers Gothic BT;
 
     @media only screen and (max-width: s.$max-width) {
       width: 90%;
@@ -21,10 +23,16 @@
 
   &__content {
     width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: end;
+    display: grid;
+    grid-template-areas:
+      "p_t l_t"
+      "p_i l_i"
+      "p_d l_d";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    margin-top: 7vmin;
 
     @media only screen and (max-width: s.$max-width) {
       width: 90%;
@@ -35,23 +43,42 @@
     }
   }
 
-  &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  &__pix_title {
+    grid-area: p_t;
   }
 
-  &__image {
+  &__pix_image {
+    grid-area: p_i;
     width: 200px;
     height: 200px;
   }
 
-  &__alt {
+  &__pix_alt {
+    grid-area: p_d;
     font-family: Handlee-Regular;
     text-decoration: none;
+    color: s.$theme-black;
+  }
+
+  &__list_title {
+    grid-area: l_t;
+  }
+
+  &__list_image {
+    grid-area: l_i;
+    width: 200px;
+    height: 200px;
+  }
+
+  &__list_alt {
+    grid-area: l_d;
+    font-family: Handlee-Regular;
+    text-decoration: none;
+    color: s.$theme-black;
+
     &:visited,
-    &:active {
+    &:active,
+    &:enabled {
       color: s.$theme-black;
     }
   }

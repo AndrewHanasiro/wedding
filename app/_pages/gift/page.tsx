@@ -10,7 +10,7 @@ import giftIcon from "../../../public/gift.png";
 
 export default function Gift() {
   let qrCodeTExt =
-    "00020126470014BR.GOV.BCB.PIX0125andrewkhanasiro@gmail.com5204000053039865802BR5921Andrew Kenji Hanasiro6009SAO PAULO61080540900062130509casamento6304DD0C";
+    "00020126640014BR.GOV.BCB.PIX0114+55119964077610224Casamento Paula e Andrew5204000053039865802BR5919PAULA AYUMI KONISHI6009SAO PAULO622605223gU9YTgfBsoKTtf9vxcnaP6304E8F0";
 
   useEffect(() => {
     const canvas = document.getElementById("canvas");
@@ -22,36 +22,29 @@ export default function Gift() {
   return (
     <section className={style.section} id="gift">
       <div className={style.gift}>
-        <h2>Lista de presentes</h2>
+        <h2>Presentes</h2>
         <p className={style.gift__description}>
           Sua presença neste momento tão especial é o que realmente importa! Mas
-          caso queira nos presentear, temos duas opções: via PIX (QR code) e uma
-          lista de casamento
+          caso queira nos presentear, temos duas opções: via PIX ou via lista de
+          presente
         </p>
         <div className={style.gift__content}>
-          <div className={style.gift__item}>
-            <canvas id="canvas" className={style.gift__image}></canvas>
-            <span className={style.gift__alt}>QR code PIX</span>
-          </div>
-          <div className={style.gift__item}>
-            <Link
-              href="https://noivos.casar.com/paula-e-andrew"
-              target="_blank"
-            >
-              <Image
-                src={giftIcon}
-                alt="gift icon"
-                className={style.gift__image}
-              />
-            </Link>
-            <Link
-              href="https://noivos.casar.com/paula-e-andrew"
-              target="_blank"
-              className={style.gift__alt}
-            >
-              Lista de presente
-            </Link>
-          </div>
+          <h3 className={style.gift__pix_title}>PIX</h3>
+          <canvas id="canvas" className={style.gift__pix_image}></canvas>
+          <span className={style.gift__pix_alt}>Chave PIX: (11)99640-7761</span>
+          <h3 className={style.gift__list_title}>Lista de Presente</h3>
+          <Image
+            src={giftIcon}
+            alt="gift icon"
+            className={style.gift__list_image}
+          />
+          <Link
+            href="https://noivos.casar.com/paula-e-andrew"
+            target="_blank"
+            className={style.gift__list_alt}
+          >
+            Clique aqui
+          </Link>
         </div>
       </div>
     </section>

@@ -46,6 +46,17 @@ body {
       }
     }
 
+    h3 {
+      font-family: Engravers Gothic BT;
+      font-weight: normal;
+      font-size: 3vmin;
+      text-align: center;
+      margin: 0;
+      @media only screen and (max-width: s.$max-width) {
+        font-size: 6vmin;
+      }
+    }
+
     h4 {
       font-family: Engravers Gothic BT;
       font-weight: normal;
