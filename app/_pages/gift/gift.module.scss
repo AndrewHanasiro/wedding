@@ -1,0 +1,25 @@
+@use "../../../styles/variables.scss" as s;
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift {
+  width: 100%;
+  @include s.vertical-center-content;
+
+  &__content {
+    width: 60%;
+
+    p {
+      text-indent: 5vmin;
+      text-align: justify;
+    }
+
+    @media only screen and (max-width: s.$max-width) {
+      width: 90%;
+    }
+  }
+}
