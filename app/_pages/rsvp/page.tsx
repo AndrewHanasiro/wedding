@@ -34,7 +34,6 @@ export default function RSVP() {
     e.preventDefault();
     const db = getDatabase(app);
     try {
-      debugger;
       const promiseList = answer.map((a) => {
         return set(ref(db, "guest/" + a.name), {
           name: a.name,
