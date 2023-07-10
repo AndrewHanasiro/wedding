@@ -1,13 +1,11 @@
 "use client";
 
-import { Dispatch, SetStateAction } from "react";
-
 import style from "./input_checkbox.module.scss";
 
 type CheckboxInput = {
   label: string;
   value: boolean;
-  setValue: Dispatch<SetStateAction<boolean>>;
+  setValue: (bool: boolean) => void;
 };
 
 export default function Checkbox({ label, value, setValue }: CheckboxInput) {

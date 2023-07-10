@@ -4,29 +4,46 @@ import React, { FormEvent, useState } from "react";
 import { getDatabase, ref, set } from "firebase/database";
 
 import { app } from "@/app/_config/firebase";
-import Checkbox from "@/components/Input/input_checkbox";
 import Submit from "@/components/Input/input_submit";
-import Text from "@/components/Input/input_text";
+import InputNumber from "@/components/Input/input_number";
 import Form from "@/components/Form";
 
 import style from "./rsvp.module.scss";
+import PersonForm, { Answer } from "./components/PersonForm";
 
 export default function RSVP() {
-  let [name, setName] = useState("");
-  let [child, setChild] = useState(false);
+  let [numberOfPeople, setNumberOfPeople] = useState(0);
+  let [answer, setAnswer] = useState<Array<Answer>>([]);
   let [isVisible, setIsVisible] = useState(false);
   let [hasError, setHasError] = useState(false);
 
-  function submit(e: FormEvent<HTMLFormElement>): void {
+  function changeNumber(num: number) {
+    setNumberOfPeople(num);
+    if (numberOfPeople >= num) {
+      setAnswer((before) => before.splice(0, num));
+    } else {
+      const newAnswer: Array<Answer> = Array(num - numberOfPeople).fill({
+        name: "",
+        children: "",
+      });
+      setAnswer((before) => [...before, ...newAnswer]);
+    }
+  }
+
+  async function submit(e: FormEvent<HTMLFormElement>): Promise<void> {
     e.preventDefault();
     const db = getDatabase(app);
     try {
-      set(ref(db, "guest/" + name), {
-        name,
-        children: child,
+      debugger;
+      const promiseList = answer.map((a) => {
+        return set(ref(db, "guest/" + a.name), {
+          name: a.name,
+          children: a.children,
+        });
       });
-      setName("");
-      setChild(false);
+      await Promise.all(promiseList);
+      setAnswer([]);
+      setNumberOfPeople(0);
     } catch (error) {
       console.error(error);
       setHasError(true);
@@ -40,12 +57,19 @@ export default function RSVP() {
       <div className={style.rsvp}>
         <h2>Confirme sua prensença</h2>
         <Form submit={submit}>
-          <Text placeholder="Nome completo" setValue={setName} value={name} />
-          <Checkbox
-            label="Possuo menos de 12 anos"
-            setValue={setChild}
-            value={child}
+          <InputNumber
+            value={numberOfPeople}
+            setValue={(e) => changeNumber(Number(e))}
+            label="Quantidade de pessoas:"
           />
+          {answer.map((a, idx) => (
+            <PersonForm
+              key={idx}
+              index={idx}
+              answer={a}
+              setAnswer={setAnswer}
+            />
+          ))}
           <Submit value="Confirmar" />
         </Form>
         {isVisible &&

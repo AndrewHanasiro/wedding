@@ -1,0 +1,28 @@
+@use "../../styles/variables.scss" as s;
+
+.input_number {
+  display: block;
+  font-size: 2vmin;
+
+  input {
+    border: none;
+    background-color: transparent;
+    border-bottom: solid s.$theme-shadow 1px;
+    padding: 1vmin;
+    font-size: 2vmin;
+    width: 4vmin;
+    text-align: center;
+    margin: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  @media only screen and (max-width: s.$max-width) {
+    width: 100%;
+    font-size: 5vmin;
+    padding: 2vmin;
+    box-shadow: 0 1vmin 2vmin s.$theme-shadow;
+  }
+}
