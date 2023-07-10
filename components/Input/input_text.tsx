@@ -1,13 +1,11 @@
 "use client";
 
-import { Dispatch, SetStateAction } from "react";
-
 import style from "./input_text.module.scss";
 
 type TextInput = {
   placeholder: string;
   value: string;
-  setValue: Dispatch<SetStateAction<string>>;
+  setValue: (str: string) => void;
 };
 
 export default function Text({ placeholder, value, setValue }: TextInput) {
