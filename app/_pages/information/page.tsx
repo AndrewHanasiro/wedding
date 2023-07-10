@@ -24,6 +24,7 @@ export default function Information() {
             <br />
             Vila Madalena - São Paulo
           </p>
+          <p className={style.information__text}>Traje: social esporte</p>
           <Map search={search} />
 
           <h4>Agende no seu calendário</h4>
