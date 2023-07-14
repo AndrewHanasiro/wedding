@@ -17,14 +17,14 @@ export default function Information() {
           <p className={style.information__text}>
             Sábado, 25 de Novembro 2023
             <br />
-            Horário: 12H
+            Horário: 12H (meio-dia)
           </p>
           <p className={style.information__text}>
             Rua Harmonia, 896
             <br />
             Vila Madalena - São Paulo
           </p>
-          <p className={style.information__text}>Traje: social esporte</p>
+          <p className={style.information__text}>Traje: esporte fino</p>
           <Map search={search} />
 
           <h4>Agende no seu calendário</h4>
