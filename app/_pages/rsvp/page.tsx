@@ -59,6 +59,7 @@ export default function RSVP() {
           <InputNumber
             value={numberOfPeople}
             setValue={(e) => changeNumber(Number(e))}
+            min={0}
             label="Quantidade de pessoas:"
           />
           {answer.map((a, idx) => (

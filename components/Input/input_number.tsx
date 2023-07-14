@@ -8,9 +8,10 @@ type NumberInput = {
   value: number;
   setValue: Dispatch<SetStateAction<string>>;
   label?: string;
+  min?: number;
 };
 
-export default function Number({ value, setValue, label }: NumberInput) {
+export default function Number({ value, setValue, label, min }: NumberInput) {
   return (
     <label className={style.input_number}>
       <span>{label}</span>
@@ -18,6 +19,7 @@ export default function Number({ value, setValue, label }: NumberInput) {
         type="number"
         required
         value={value}
+        min={min}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setValue(e.target.value)
         }
