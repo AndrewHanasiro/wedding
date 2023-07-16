@@ -15,5 +15,6 @@ jobs:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_GOING2WEDDING_6B935 }}"
           projectId: going2wedding-6b935
+          channelId: live
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
